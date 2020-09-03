@@ -1,0 +1,177 @@
+
+body {
+    box-sizing: border-box;
+    margin: 3rem 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    background: url('../images/back.jpg') no-repeat center center/cover;
+}
+
+#container {
+    background: radial-gradient(circle, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 50%, rgba(245,245,245,1) 100%);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    left:-300px;
+    transform: rotateY(70deg);
+    animation: rotate 0.6s 1 forwards ease-in;
+}
+
+#container > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 99%;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 186, 24);
+    position: relative;
+}
+
+#container > form > div {
+    min-width: 90%;
+    margin: 0.5rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#container > form > div:first-of-type,
+#container > form > div:last-of-type {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+}
+
+#heading{
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: 500;
+ }
+
+input, button[type="submit"] {
+    width: 100%;
+    display: block;
+    line-height: 1.5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: whitesmoke;
+    border-radius: 2px;
+    font-size: medium;
+    transition: all 0.25s ease-in;
+    word-wrap: break-word !important;
+}
+
+input[type="text"]:focus {
+    border-bottom: 1px solid rgb(255, 186, 24);
+    box-shadow: 1px 5px 25px 1px rgba(128, 128, 128, 0.219);
+    background-color: #fbfbfb;
+}
+
+input[type="text"]:hover {
+    box-shadow: 1px 5px 25px 1px rgba(128, 128, 128, 0.219);
+    background-color:#fbfbfb;
+}
+
+button[type="submit"] {
+    padding: 0.5rem 0rem;
+    color: white;
+    font-size: medium;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 0rem;
+}
+
+.active {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+.inactive {
+    background-color: #c5c5c5 !important;
+}
+
+.hov:hover{
+    cursor: pointer;
+    background-image: linear-gradient(315deg, #0452ce 0%, #048aaf 74%);
+    transform: scale(1.01);
+}
+
+
+#background {
+    position: absolute;
+    width:140% !important;
+    height: 60%;
+    background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+    left: -30%;
+    top: -40%;
+    margin: 0 !important;
+    transform: rotate(4deg);
+    border-radius: 150%;
+    border: 1px solid rgb(255, 186, 24);
+}
+
+span {
+    width: 100%;
+    position: relative;
+}
+
+small {
+    display: inline-block;
+}
+
+
+.cross > span::after {
+    content: '';
+    background: url('../images/close.svg') no-repeat center center/15px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 1px;
+    top: 25%;
+}
+
+
+.tick > span::after {
+    content: '';
+    background: url('../images/tick.svg') no-repeat center center/15px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 1px;
+    top: 25%;
+}
+
+@keyframes rotate {
+    from{
+        opacity: 0;
+    }
+    to{
+        left: 0;
+        transform: rotateY(0deg);
+    }
+}
+

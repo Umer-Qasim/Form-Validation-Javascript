@@ -1,0 +1,15 @@
+@media only screen and (max-width: 500px){
+    #container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    body {
+        align-items: flex-start;
+    }
+    #container {
+        width: 50%;
+        margin: 6rem;
+    }
+}
